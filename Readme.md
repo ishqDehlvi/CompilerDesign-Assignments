@@ -1,6 +1,6 @@
 # Compiler Design Assignments
 
-![Heading Image](https://dribbble.com/shots/3534761-Revving-The-Web-Engine/attachments/9879130?mode=media)
+![Heading Image](https://cdn.dribbble.com/users/241205/screenshots/3534761/media/c07e695972da26a3ac8d88c32277fc81.jpg)
 
 Welcome to the repository for Compiler Design Assignments. This repository contains all the materials and assignments related to the Compiler Design course.
 
