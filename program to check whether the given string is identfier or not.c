@@ -12,19 +12,30 @@ bool isAlphanumeric(char ch) {
 }
 
 bool isIdentifier(char *str) {
-    if (!isAlphabet(str[0])) {
-        return false;
-    }
-
+    int state = 0;
     int len = strlen(str);
 
-    for (int i = 1; i < len; i++) {
-        if (!isAlphanumeric(str[i])) {
-            return false;
+    for (int i = 0; i < len; i++) {
+        char ch = str[i];
+
+        switch (state) {
+            case 0:
+                if (isAlphabet(ch))
+                    state = 1;
+                else
+                    return false;
+                break;
+
+            case 1:
+                if (isAlphanumeric(ch))
+                    state = 1;
+                else
+                    return false;
+                break;
         }
     }
 
-    return true;
+    return state == 1;
 }
 
 int main() {
@@ -41,3 +52,4 @@ int main() {
 
     return 0;
 }
+
